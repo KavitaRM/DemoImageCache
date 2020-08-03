@@ -37,14 +37,14 @@ class CustomImageView: UIImageView {
             }
             
             DispatchQueue.main.async {
-                guard let imageToCache = UIImage(data: data!) else { return }
-                
-                if self.imageUrlString == urlString {
+                if let imageToCache = UIImage(data: data!) {
                     self.image = imageToCache
+                } else {
+                    self.image = UIImage(named: "placeholder")
                 }
                 
                 // store the image in cache
-                imageCache.setObject(imageToCache, forKey: urlString as NSString)
+                imageCache.setObject(self.image!, forKey: urlString as NSString)
             }
             
         }).resume()

@@ -60,7 +60,7 @@ class CustomCell: UITableViewCell {
     func configureDescriptionLabel() {
         descriprionLabel.numberOfLines = 0
         descriprionLabel.font = UIFont(name: "Avenir-Book", size: 12)
-        descriprionLabel.textColor = UIColor.lightGray
+        descriprionLabel.textColor = UIColor.darkGray
     }
     
     func setupRowImage() {
