@@ -64,9 +64,11 @@ class CustomCell: UITableViewCell {
     }
     
     func setupRowImage() {
-        if let thumbnailImageUrl = model?.imageUrl {
-            rowImage.loadImageUsingUrlString(urlString: thumbnailImageUrl)
-        } else {
+        if let httpUrl = model?.imageUrl, let url = NSURL(string: httpUrl),
+            let data = NSData(contentsOf: url as URL), let image = UIImage(data: data as Data) {
+            rowImage.image = image
+        }
+        else {
             rowImage.image = UIImage(named: "placeholder")
         }
     }
