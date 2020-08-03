@@ -22,11 +22,13 @@ class CustomImageView: UIImageView {
         
         image = nil
         
+        // get the image from cache
         if let imageFromCache = imageCache.object(forKey: urlString as NSString) {
             self.image = imageFromCache
             return
         }
         
+        // If there is no image in cache, run the task to download image
         URLSession.shared.dataTask(with: url, completionHandler: { (data, respones, error) in
             
             if error != nil {
@@ -41,6 +43,7 @@ class CustomImageView: UIImageView {
                     self.image = imageToCache
                 }
                 
+                // store the image in cache
                 imageCache.setObject(imageToCache, forKey: urlString as NSString)
             }
             
