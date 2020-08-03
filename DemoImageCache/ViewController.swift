@@ -11,15 +11,18 @@ import UIKit
 class ViewController: UIViewController {
     let tableView = UITableView()
     var safeArea: UILayoutGuide!
-    
     var viewModel = DataViewModel()
+    let loader = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loader.center = view.center
+        view.addSubview(loader)
+        loader.startAnimating()
         configureTableView()
         getData()
     }
- 
+  
     func configureTableView() {
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -41,12 +44,15 @@ class ViewController: UIViewController {
     }
     
     func getData() {
+        loader.startAnimating()
         viewModel.fetchData(successCallback: {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
                 self.title = self.viewModel.getTitle()
+                self.loader.stopAnimating()
             }
         }) {
+            self.loader.stopAnimating()
             print("Failed")
         }
     }
@@ -61,7 +67,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? CustomCell else { return UITableViewCell()}
         cell.selectionStyle = .none
         cell.layoutIfNeeded()
-        cell.setNeedsLayout()
+
         let model = viewModel.getDataForRow(index: indexPath.row)
         cell.model = model
 
