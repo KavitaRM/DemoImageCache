@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "F75017E4-242A-46FF-9F3B-541C6E09A155"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "98120D1C-7675-49BA-9E2B-ADA608B587EB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DemoImageCache/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9C8DF988-4019-4116-8DD7-D6332F2B23B2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DemoImageCache/ViewModel/DataViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "getDataForRow(index:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9C8DF988-4019-4116-8DD7-D6332F2B23B2 - d706b7a2786a50a1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DemoImageCache.DataViewModel.getDataForRow(index: Swift.Int) -&gt; Swift.Optional&lt;DemoImageCache.RowValues&gt;"
+                  moduleName = "DemoImageCache"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kavitamalagavi/Documents/DemoImageCache/DemoImageCache/ViewModel/DataViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "59">
+               </Location>
+               <Location
+                  uuid = "9C8DF988-4019-4116-8DD7-D6332F2B23B2 - 3e013af5beeace16"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (DemoImageCache.RowValues) -&gt; Swift.Bool in DemoImageCache.DataViewModel.getDataForRow(index: Swift.Int) -&gt; Swift.Optional&lt;DemoImageCache.RowValues&gt;"
+                  moduleName = "DemoImageCache"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kavitamalagavi/Documents/DemoImageCache/DemoImageCache/ViewModel/DataViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "39">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

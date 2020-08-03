@@ -24,5 +24,19 @@ class DataViewModel: NSObject {
             }
         }
     }
+    
+    func rowCount() -> Int {
+        let arr = dataModel?.rows?.filter({$0.title != nil})
+        return arr?.count ?? 0
+    }
+
+    func getDataForRow(index: Int) -> RowValues? {
+        let arr = dataModel?.rows?.filter({$0.title != nil})
+        return arr?[index]
+    }
+    
+    func getTitle() -> String? {
+        return dataModel?.title
+    }
   
 }
